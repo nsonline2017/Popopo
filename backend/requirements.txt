@@ -1,0 +1,14 @@
+fastapi==0.143.1
+uvicorn[standard]==0.54.0
+sqlalchemy==2.1.4
+pydicom==3.0.2
+pillow==12.3.0
+python-jose[cryptography]==3.5.0
+python-multipart==0.0.32
+authlib==1.9.1
+httpx==0.28.1
+email-validator==2.3.0
+numpy==2.4.6
+pylibjpeg==2.1.0
+pylibjpeg-libjpeg==2.4.0
+pylibjpeg-openjpeg==2.6.0
