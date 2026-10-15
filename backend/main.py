@@ -41,3 +41,8 @@ app.mount("/media", StaticFiles(directory=MEDIA_ROOT), name="media")
 FRONTEND_DIST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend", "dist")
 if os.path.isdir(FRONTEND_DIST):
     app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")
+else:
+    from fastapi.responses import HTMLResponse
+    @app.get("/")
+    def root():
+        return HTMLResponse("<h1>Popopo</h1><p>Frontend no compilado. Ejecuta: cd frontend && npm install && npm run build</p><p>API: <a href='/docs'>/docs</a></p>")
